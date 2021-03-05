@@ -5,6 +5,7 @@
     --secondary-color: #f3f3f3;
     --header-text-color: #000000;
     --primary-text-color: #ffffff;
+    --form-text-color: rgb(48, 48, 48);
     --secondary-text-color: #f3f3f3;
     --background-color: whitesmoke;
     --button-background: #37af65;
@@ -73,6 +74,7 @@ h1 {
 form {
     border-radius: 1.125rem;
     background-color: var(--primary-color);
+    box-shadow: .3rem .3rem .6rem var(--header-text-color);
 }
 
 input[type="text"],
@@ -85,7 +87,7 @@ option {
     margin-bottom: .6rem;
     padding: .4rem;
     background-color: var(--secondary-color);
-    color: var(--primary-text-color);
+    color: var(--form-text-color);
     font-weight: 400;
 }
 
