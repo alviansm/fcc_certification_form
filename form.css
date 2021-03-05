@@ -1,0 +1,135 @@
+/* Basic Preferences */
+
+:root {
+    --primary-color: darkgray;
+    --secondary-color: gray;
+    --primary-text-color: black;
+    --secondary-text-color: white;
+    --background-color: lightgray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 200vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ======== Layout =========*/
+
+h1 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#description {
+    margin: 0 auto;
+    text-align: center;
+}
+
+form {
+    width: 90%;
+    max-width: 720px;
+    margin: 1.125rem auto;
+    padding: 1.125rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-container,
+.ux-container {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin: .25rem auto;
+}
+
+/* ========== Typograph & Styling ========== */
+
+h1 {
+    font-weight: 600;
+    font-size: 2.25rem;
+    margin-top: 1.125rem;
+    color: var(--primary-text-color);
+}
+
+#description {
+    font-weight: 300;
+    font-size: 1.125rem;
+    margin-bottom: 1.125rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--secondary-text-color);
+}
+
+form {
+    border-radius: 1.125rem;
+    background-color: var(--primary-color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+select,
+option {
+    font-size: 1.125rem;
+    margin-bottom: .6rem;
+    padding: .4rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-text-color);
+    font-weight: 400;
+}
+
+label,
+.form-question {
+    font-size: 1.125rem;
+    margin-bottom: .25rem;
+    font-weight: 600;
+}
+
+.choice-group {
+    margin: 1.125rem 0 1.125rem 0;
+}
+
+input[type="submit"] {
+    margin: 1.125rem 0 1.125rem 0;
+}
+
+/* Other Recomendation SetUp */
+
+#other-improve {
+    position: absolute;
+    margin-left: .4rem  ;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out;
+}
+
+.other-toggler:checked ~ #other-improve {
+    transform: scale(1, 1);
+    transition: transform 300ms ease-in-out 300ms;
+    transform-origin: left;
+}
+
+.other-toggler-container {
+    display: block;
+}
+
+#other-toggler-label {
+    margin-left: .25rem;
+    position: absolute;
+    opacity: 100;
+    transition: opacity 300ms ease-in-out 300ms;
+}
+
+.other-toggler:checked ~ #other-toggler-label {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}

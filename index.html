@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="alviansmaulana">
+		
+		<title>Survey Form</title>
+		
+		<link rel="stylesheet" href="form.css">
+	</head>
+	<body>
+		<h1 id="title">freeCodeCamp Survey Form</h1>
+		<p id="description">Thank you for taking the time to help us improve!</p>
+		<form action="index.html" id="survey-form">
+			<div class="user-container">
+				<label for="name" id="name-label">Full Name</label>
+				<input type="text" id="name" placeholder="Your Full Name" required>
+				<label for="email" id="email-label">Email</label>
+				<input type="email" id="email" placeholder="youremail@mail.com" required>
+				<label for="number" id="number-label">Age <span class="clue">(Optional)</span></label>
+				<input type="number" id="number" placeholder="19" min="5" max="150">
+				<p class="form-question">What best describe you?</p>
+				<select id="dropdown" name="user-career">
+					<option value="user-kindergarden">Kindergarden</option>
+					<option value="user-student">Student</option>
+					<option value="user-webdesigner">Web Designer</option>
+					<option value="user-dev">Developer</option>
+					<option value="user-other">Other</option>
+					<option value="user-classified">Prefer not to say</option>
+				</select>
+			</div> <!-- User Identity Container End -->
+			<div class="ux-container">
+				<div class="radios">
+					<p class="form-question">Would you recommend freeCodeCamp?</p>
+					<div class="choice-group">
+						<input type="radio" id="definitely" value="definitely" name="user-site-rec">
+						<label for="definitely">Definitely</label>
+					</div>
+					<div class="choice-group">
+						<input type="radio" id="maybe" value="maybe" name="user-site-rec">
+						<label for="maybe">Maybe</label>	
+					</div>
+					<div class="choice-group">
+						<input type="radio" id="not-sure" value="not-sure" name="user-site-rec">
+						<label for="not-sure">Not sure</label>
+					</div>
+				</div>
+				<div class="checkboxes">
+					<p class="form-question">What do you like to be improved?</p>
+					<div class="choice-group">
+						<input type="checkbox" id="front-end" value="front-end">
+						<label for="front-end">Front-End</label>
+					</div>
+					<div class="choice-group">
+						<input type="checkbox" id="back-end" value="back-end">
+						<label for="back-end">Back-End</label>	
+					</div>
+					<div class="choice-group">
+						<input type="checkbox" id="challenges" value="challenges">
+						<label for="challenges">Challenges</label>	
+					</div>
+					<div class="choice-group">
+						<input type="checkbox" id="algorithms" value="algorithms">
+						<label for="algorithms">JavaScript Algorithms and Data Structure</label>	
+					</div>
+					<div class="choice-group">
+						<input type="checkbox" id="data-analysis" value="data-analysis">
+						<label for="data-analysis">Python Data Analysis</label>	
+					</div>
+					<div class="choice-group">
+						<input type="checkbox" id="data-visualization" value="data-visualization">
+						<label for="data-visualization">D3.js Data Visualization</label>	
+					</div>
+					<div class="choice-group">
+						<input type="checkbox" id="community" value="community">
+						<label for="community">Community</label>	
+					</div>
+					<div class="choice-group">
+						<input type="checkbox" id="site-uiux" value="site-uiux">
+						<label for="site-uiux">Site UIUX</label>	
+					</div>
+					<div class="choice-group other-toggler-container">
+						<input type="checkbox" id="other" value="other" class="other-toggler">
+						<label for="other" id="other-toggler-label">Other</label>						
+						<input type="text" id="other-improve" placeholder="Other recomendation">
+					</div>					
+				</div>
+				<p class="form-question">Comments <span class="clue">(Optional)</span></p>
+				<textarea></textarea>
+				<input type="submit" value="Submit" id="submit">
+			</div> <!-- UX Container End -->
+		</form>
+		<script src="bundle.js"></script>
+	</body>
+</html>
